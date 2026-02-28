@@ -196,38 +196,8 @@ footer {
   text-align: center;
 }
 /* ================= TABLETTE (≤1024px) ================= */
-@media screen and (max-width: 1024px) {
-  header h1 {
-    font-size: 32px;       /* réduit la taille du titre */
-    margin-left: 0;
-    text-align: center;    /* centre le titre */
-  }
-
-  nav {
-    justify-content: center; /* nav centré sous le titre */
-  }
-
-  .hero-text {
-    padding: 30px;
-    margin-top: 60px;
-  }
-
-  .hero-text h2 {
-    font-size: 30px;
-  }
-
-  .cards .card {
-    width: 200px;
-  }
-
-  .gallery img {
-    width: 200px;
-  }
-
-  .carousel-track img {
-    width: 220px;
-  }
-}
+ 
+   
 
 /* ================= MOBILE (≤768px) ================= */
 @media screen and (max-width: 768px) {
