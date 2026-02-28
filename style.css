@@ -1,4 +1,3 @@
-/* RESET & GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -18,27 +17,17 @@ header {
   align-items: center;
   padding: 20px 60px;
   background: black;
-  flex-wrap: wrap; /* permet le passage en ligne sur petits écrans */
 }
-
 .logo img {
-  width: 90px;
+  width: 0px;
   border-radius: 50%;
 }
 
 header h1 {
   color: gold;
   font-size: 45px;
-  margin-left: 20px; /* réduit sur mobile */
-  flex: 1 1 100%;
-  text-align: center; /* centré sur mobile */
-}
+  margin-left: 180px;
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-top: 10px;
 }
 
 nav a {
@@ -60,6 +49,12 @@ nav a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+   background-size: 1500px;
+}
+.hero image {
+  width: 100%;
+  height: 50%;
+  object-fit: cover;
 }
 
 .hero-text {
@@ -104,13 +99,13 @@ nav a:hover {
   margin-bottom: 30px;
   color: gold;
 }
+ 
 
 /* SERVICES */
 .cards {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap; /* permet au contenu de passer à la ligne */
 }
 
 .card {
@@ -118,7 +113,6 @@ nav a:hover {
   padding: 25px;
   border-radius: 15px;
   width: 250px;
-  margin-bottom: 20px;
   transition: 0.3s;
 }
 
@@ -132,24 +126,21 @@ nav a:hover {
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .gallery img {
   border-radius: 15px;
   width: 250px;
-  margin-bottom: 20px;
   transition: 0.3s;
 }
 
 .gallery img:hover {
   transform: scale(1.05);
 }
-
 .carousel {
   width: 100%;
   overflow: hidden;
-  max-width: 900px;
+  max-width: 900px; /* largeur max du carousel */
   margin: auto;
   border-radius: 15px;
 }
@@ -170,32 +161,33 @@ nav a:hover {
 .carousel-track img:hover {
   transform: scale(1.05);
 }
-
-iframe {
+ 
+ iframe {
   border-radius: 20px;
   max-width: 800px;
-  width: 100%;
   box-shadow: 0 0 20px rgba(0,0,0,0.2);
 }
 
-.section a {
+ .section a {
   text-decoration: none;
   color: #000;
   font-size: 1.1rem;
+   
   position: relative;
-  padding: 10px 10px;
-  background: gold;
-  border-radius: 70px;
-  font-weight: bold;
-  transition: 0.3s;
-  margin: 10px;
+    padding: 10px 10px;
+    background: gold;
+    border-radius: 70px;
+    font-weight: bold;
+    transition: 0.3s;
+    margin-bottom: 50px;
+    margin: 10px;
 }
-
-.section a:hover {
+ .section a:hover {
   background: rgb(242, 229, 145);
   color: black;
   transform: scale(1.1);
 }
+
 
 /* FOOTER */
 footer {
@@ -203,96 +195,128 @@ footer {
   background: black;
   text-align: center;
 }
-
-/* ================= RESPONSIVE ================= */
+/* ================= TABLETTE (≤1024px) ================= */
 @media screen and (max-width: 1024px) {
-  header {
-    padding: 20px 30px;
-  }
   header h1 {
-    font-size: 32px;
+    font-size: 32px;       /* réduit la taille du titre */
     margin-left: 0;
+    text-align: center;    /* centre le titre */
   }
+
+  nav {
+    justify-content: center; /* nav centré sous le titre */
+  }
+
   .hero-text {
     padding: 30px;
     margin-top: 60px;
   }
+
   .hero-text h2 {
     font-size: 30px;
   }
+
   .cards .card {
     width: 200px;
   }
+
   .gallery img {
     width: 200px;
   }
+
   .carousel-track img {
     width: 220px;
   }
 }
 
+/* ================= MOBILE (≤768px) ================= */
 @media screen and (max-width: 768px) {
   header {
-    flex-direction: column;
+    flex-direction: column;  /* logo + titre + nav en colonne */
     align-items: center;
   }
-  nav {
-    margin-top: 10px;
-    flex-direction: column;
+
+  header h1 {
+    font-size: 28px;
+    margin: 10px 0;
+    text-align: center;
   }
+
+  nav {
+    flex-direction: column;  /* liens en colonne */
+    gap: 10px;
+    margin-top: 10px;
+  }
+
   nav a {
     margin: 5px 0;
+    font-size: 16px;
   }
+
   .hero-text {
     padding: 20px;
     margin-top: 40px;
   }
+
   .hero-text h2 {
     font-size: 25px;
   }
+
   .hero-text p {
     font-size: 16px;
   }
-  .cards {
-    gap: 15px;
-  }
+
   .cards .card {
     width: 100%;
   }
+
   .gallery img {
     width: 100%;
     max-width: 250px;
   }
+
   .carousel-track img {
     width: 180px;
   }
 }
 
+/* ================= PETIT MOBILE (≤480px) ================= */
 @media screen and (max-width: 480px) {
   header h1 {
     font-size: 22px;
     text-align: center;
     margin: 10px 0;
   }
+
+  .logo img {
+    width: 70px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
   .hero-text {
     padding: 15px;
     margin-top: 30px;
   }
+
   .hero-text h2 {
     font-size: 20px;
   }
+
   .hero-text p {
     font-size: 14px;
   }
-  nav a {
-    font-size: 14px;
-  }
+
   .cards .card {
     width: 100%;
   }
+
   .gallery img {
     width: 100%;
   }
+
   .carousel-track img {
     width: 150px;
   }
