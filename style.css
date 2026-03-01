@@ -35,6 +35,7 @@ nav a {
   text-decoration: none;
   color: white;
   transition: 0.3s;
+  font-weight: 600;
 }
 
 nav a:hover {
@@ -286,7 +287,8 @@ footer {
 .modal-box {
   background: #111;
   color: white;
-  width: 300px;
+  width: 500px;
+  height: 50%;
   padding: 30px;
   border-radius: 15px;
   text-align: center;
@@ -307,6 +309,7 @@ footer {
   top: 10px;
   font-size: 25px;
   cursor: pointer;
+  margin: 8px 0;  
 }
 
 /* ================= MOBILE (≤768px) ================= */
@@ -330,9 +333,10 @@ footer {
 }
 
 nav a {
-  display: block;       /* chaque lien prend une ligne */
+  display: block;        
     margin: 8px 0;        /* espace vertical */
     font-size: 14px;
+    font-weight: 600;
 }
 
   .hero-text {
