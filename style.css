@@ -295,6 +295,7 @@ footer {
   position: absolute;
   top: 50%;
   left: 50%;
+  font-size: 20px ;
   transform: translate(-50%, -50%);
 }
 
@@ -309,7 +310,6 @@ footer {
   top: 10px;
   font-size: 25px;
   cursor: pointer;
-  margin: 8px 0;  
 }
 
 /* ================= MOBILE (≤768px) ================= */
@@ -337,6 +337,7 @@ nav a {
     margin: 8px 0;        /* espace vertical */
     font-size: 14px;
     font-weight: 600;
+  
 }
 
   .hero-text {
@@ -416,4 +417,9 @@ nav a {
     width: 130px;
      
   }
+  .modal-box {
+   
+  font-size: 10px ;
+   
+}
 }
