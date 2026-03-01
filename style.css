@@ -286,12 +286,16 @@ footer {
   }
 
   nav {
-  display: flex;
-  gap: 10px; /* espace entre les liens */
+  display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 nav a {
-  font-size: 12px;
+  display: block;       /* chaque lien prend une ligne */
+    margin: 8px 0;        /* espace vertical */
+    font-size: 14px;
 }
 
   .hero-text {
@@ -334,12 +338,16 @@ nav a {
   }
 
   nav {
-  display: flex;
-  gap: 10px; /* espace entre les liens */
+   display: block;
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
 }
 
 nav a {
-  font-size: 12px;
+  display: block;       /* chaque lien prend une ligne */
+    margin: 8px 0;        /* espace vertical */
+    font-size: 14px;
 }
 
   .hero-text {
