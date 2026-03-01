@@ -66,6 +66,20 @@
       </div>
     </div>
   </section>
+  <!-- BOUTON PLUS DE PHOTOS -->
+<div style="text-align:center; margin-top:30px;">
+  <button class="btn" onclick="openGallery()">Voir plus de photos</button>
+</div>
+
+<!-- POPUP GALERIE -->
+<div id="photoModal" class="modal">
+  <span class="close" onclick="closeGallery()">&times;</span>
+  <img class="modal-content" id="modalImage">
+  <div class="modal-nav">
+    <button onclick="prevPhoto()">❮</button>
+    <button onclick="nextPhoto()">❯</button>
+  </div>
+</div>
 
   <!-- RENDEZ-VOUS -->
   <section id="rendezvous" class="section">
@@ -142,6 +156,49 @@ function onFormSubmit(e) {
 }
 
 
+
+const photos = [
+  "images/image 01.jpeg",
+  "images/image 01.jpeg",
+  "images/image 03.jpeg",
+  "images/image 04.jpeg",
+  "images/image 05.jpeg",
+  "images/image 06.jpeg",
+   "images/image 07.jpeg",
+  "images/image 08.jpeg",
+  "images/image 09.jpeg",
+  "images/image 10.jpeg",
+  "images/image 11.jpeg",
+  "images/image 12.jpeg",
+   "images/image 13.jpeg",
+  "images/image 14.jpeg",
+  "images/image 15.jpeg",
+  "images/image 16.jpeg",
+  "images/image 17.jpeg"
+   
+
+];
+
+let currentIndex = 0;
+
+function openGallery() {
+  document.getElementById("photoModal").style.display = "block";
+  document.getElementById("modalImage").src = photos[currentIndex];
+}
+
+function closeGallery() {
+  document.getElementById("photoModal").style.display = "none";
+}
+
+function nextPhoto() {
+  currentIndex = (currentIndex + 1) % photos.length;
+  document.getElementById("modalImage").src = photos[currentIndex];
+}
+
+function prevPhoto() {
+  currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+  document.getElementById("modalImage").src = photos[currentIndex];
+}
 
 
   </script>

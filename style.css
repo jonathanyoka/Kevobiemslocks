@@ -187,6 +187,48 @@ nav a:hover {
   color: black;
   transform: scale(1.1);
 }
+/* POPUP */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 80px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  text-align: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 70vh;
+  border-radius: 15px;
+}
+
+.close {
+  position: absolute;
+  top: 30px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.modal-nav {
+  margin-top: 20px;
+}
+
+.modal-nav button {
+  background: gold;
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+}
 
 
 /* FOOTER */
@@ -248,7 +290,7 @@ footer {
 }
 
 nav a {
-  font-size: 14px;
+  font-size: 12px;
 }
 
   .hero-text {
@@ -296,7 +338,7 @@ nav a {
 }
 
 nav a {
-  font-size: 14px;
+  font-size: 12px;
 }
 
   .hero-text {
